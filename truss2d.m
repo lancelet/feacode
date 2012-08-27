@@ -454,7 +454,7 @@ function truss2d()
 
   % use direct assembly to find the system stiffness matrix
   K = directAssembly(nodes, elements);
-
+  
   % solve the system
   d_E = [ zeros(fixedDOF,1) ];  % essential boundary conditions
   f_F = [ zeros(nDOF - fixedDOF - 1,1) ; -14000 ];  % applied forces
